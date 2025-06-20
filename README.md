@@ -1,2 +1,1 @@
-# RegentScar.github.io
-Meine Portfolio-Website
+# Meine Portfolio-Website

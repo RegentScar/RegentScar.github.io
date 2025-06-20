@@ -18,19 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Navbar laden und den aktiven Link setzen
-    loadComponent('navbar.html', 'navbar-placeholder', () => {
+    loadComponent('/navbar.html', 'navbar-placeholder', () => {
         const currentPage = window.location.pathname;
         const links = document.querySelectorAll('.navbar-right a');
         links.forEach(link => {
             const linkPath = link.getAttribute('href');
-            if (linkPath === currentPage || (currentPage === '/' && linkPath === 'index.html')) {
+            if (linkPath === currentPage || (currentPage === '/' && linkPath === '/index.html')) {
                 link.classList.add('active');
             }
         });
     });
 
     // Footer laden und das Jahr setzen
-    loadComponent('footer.html', 'footer-placeholder', () => {
+    loadComponent('/footer.html', 'footer-placeholder', () => {
         const yearSpan = document.getElementById('year');
         if (yearSpan) {
             yearSpan.textContent = new Date().getFullYear();

@@ -1,0 +1,282 @@
+/* Globale Einstellungen */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*   Navigation Bar  */
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-left:hover {
+    color: #1e90ff;
+    text-shadow: 0 0 8px #1e90ff;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover,
+.navbar-right a.active {
+    color: #1e90ff;
+}
+
+/*   Hauptinhalte    */
+main {
+    flex: 1;
+    margin-top: 120px;
+    /* Einheitlicher Abstand für alle Seiten */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+/*   Einheitlicher Content-Container (für alle Seiten)    */
+.content-section {
+    padding: 20px;
+    text-align: left;
+    max-width: 800px;
+    width: 100%;
+}
+
+.content-section.text-center {
+    text-align: center;
+}
+
+.content-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #1e90ff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.content-section p,
+.content-section ul {
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+.content-section ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.content-section li {
+    margin: 8px 0;
+}
+
+/*   Skill Chart (NEU)   */
+.skills-container h3 {
+    text-align: left;
+    /* Überschriften im Skill-Bereich linksbündig */
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.skill-bar-container {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    height: 12px;
+}
+
+.skill-bar {
+    height: 100%;
+    background-color: #1e90ff;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+/* Button */
+.btn {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/*   Projektbereich (Grid)  */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.project-card {
+    background-color: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+.project-image {
+    max-width: 100%;
+    width: auto;
+    max-height: 400px;
+    border-radius: 10px;
+    margin: 0 auto 25px auto;
+    display: block;
+}
+
+.project-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #1e90ff;
+    text-align: left;
+    /* Stellt sicher, dass Titel im Card links sind */
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+/*      Footer       */
+.footer {
+    background-color: #1c1c1c;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Medienanpassungen */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+    }
+
+    .navbar-right {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-right a {
+        margin: 5px 10px;
+    }
+
+    main {
+        margin-top: 150px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 180px;
+    }
+
+    .content-section h1 {
+        font-size: 2rem;
+    }
+}
